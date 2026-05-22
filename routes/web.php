@@ -83,7 +83,7 @@ Route::get('view/pet/{id}', function () {
 
 //Middleware Auth
 Route::middleware('auth')->group(function () {
-
+// hola soy Nicol
     Route::middleware(['Admin'])->group(function () {
         Route::resources([
             'users' => UserController::class,
@@ -123,8 +123,6 @@ Route::middleware('auth')->group(function () {
     Route::post('search/listpets', [CustomerController::class, 'searchpets']);
     Route::get('showpet/{id}', [CustomerController::class, 'showpet']);
     Route::post('makeadoption', [CustomerController::class, 'makeadoption']);
-
-
 });
 
 require __DIR__ . '/auth.php';
