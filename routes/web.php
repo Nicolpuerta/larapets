@@ -80,7 +80,7 @@ Route::get('view/pet/{id}', function () {
     $pet = App\Models\Pet::find(request()->id);
     return view('showpet')->with('pet', $pet);
 });
-
+// Yo me llamo susana sunanita
 //Middleware Auth
 Route::middleware('auth')->group(function () {
 // hola soy Nicol
